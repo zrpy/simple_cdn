@@ -1,4 +1,5 @@
 import flask,os,time,random,string,math,psutil,hashlib
+os.system("mkdir uploads")
 from flask import Flask, request, send_from_directory
 from werkzeug.utils import secure_filename
 from functools import wraps
