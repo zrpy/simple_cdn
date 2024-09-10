@@ -6,7 +6,7 @@ from functools import wraps
 
 app=flask.Flask("Cdn Server")
 app.config['UPLOAD_FOLDER'] = './uploads'
-host="http://localhost:8000"
+host="http://localhost:8080"
 access_count=0
 
 
@@ -80,4 +80,4 @@ async def usage():
     return flask.jsonify({"file_size":convert_size(get_dir_size(dir)),"file_count":"","memory_percentage":memory,"access_count":access_count})
 
 
-app.run(host="0.0.0.0",port=8000)
+app.run(host="0.0.0.0",port=8080)
